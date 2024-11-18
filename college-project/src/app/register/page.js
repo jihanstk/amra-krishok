@@ -66,7 +66,7 @@ const register = () => {
                     flower: 0,
                   };
                   axios
-                    .post("http://localhost:3002/user", userData)
+                    .post("https://api-amra-krishok.vercel.app/user", userData)
                     .then((res) => {
                       console.log(res);
                       router.push("/");

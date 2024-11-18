@@ -14,7 +14,7 @@ const SocialLogin = ({ useFrom }) => {
         console.log(result);
         const user = result.user;
         axios
-          .get(`http://localhost:3002/user/${user?.email}`)
+          .get(`https://api-amra-krishok.vercel.app/user/${user?.email}`)
           .then((res) => console.log(res.data))
           .catch((err) => console.log(err.message));
 

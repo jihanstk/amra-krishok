@@ -24,7 +24,7 @@ const Dashboard = ({ children }) => {
   console.log(loading);
   useEffect(() => {
     axios
-      .get(`http://localhost:3002/user/${user?.email}`)
+      .get(`https://api-amra-krishok.vercel.app/user/${user?.email}`)
       .then((res) => setProfUser(res.data[0]));
   }, [user]);
   useEffect(() => {

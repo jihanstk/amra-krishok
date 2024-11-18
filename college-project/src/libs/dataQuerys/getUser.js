@@ -7,7 +7,7 @@ const getUser = () => {
   const [profUser, setProfUser] = useState({});
   useEffect(() => {
     axios
-      .get(`http://localhost:3002/user/${user?.email}`)
+      .get(`https://api-amra-krishok.vercel.app/user/${user?.email}`)
       .then((res) => setProfUser(res.data[0]));
   }, [user]);
   return profUser;

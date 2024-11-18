@@ -2,7 +2,9 @@ import axios from "axios";
 
 export default async function getLatestPost() {
   try {
-    const latestPost = await axios.get(`http://localhost:3002/farmer`);
+    const latestPost = await axios.get(
+      `https://api-amra-krishok.vercel.app/farmer`
+    );
 
     return latestPost.data.latestPost;
   } catch (error) {

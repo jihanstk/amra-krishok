@@ -56,10 +56,12 @@ const AuthProvider = ({ children }) => {
         userEmail: currentUser?.email,
       };
       if (currentUser) {
-        axios.post("http://localhost:3002/jwt", jwtData).then((res) => {
-          const token = res.data.token;
-          localStorage.setItem("access-token", token);
-        });
+        axios
+          .post("https://api-amra-krishok.vercel.app/jwt", jwtData)
+          .then((res) => {
+            const token = res.data.token;
+            localStorage.setItem("access-token", token);
+          });
       } else {
         localStorage.removeItem("access-token");
       }
