@@ -3,7 +3,6 @@ import getSinglePost from "@/libs/dataQuerys/getSinglePost";
 import moment from "moment";
 import Image from "next/image";
 import Link from "next/link";
-import { Suspense } from "react";
 
 const SinglePost = async ({ params }) => {
   const post = await getSinglePost(params.postId);
@@ -91,9 +90,7 @@ const SinglePost = async ({ params }) => {
         </div>{" "}
       </div>
       <div>
-        <Suspense fallback={"Loading...."}>
-          <PostComments postId={post?._id} />
-        </Suspense>
+        <PostComments postId={post?._id} />
       </div>
     </div>
   );
