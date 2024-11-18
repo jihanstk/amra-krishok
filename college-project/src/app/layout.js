@@ -1,5 +1,5 @@
 import AuthProvider from "@/AuthProvider/AuthProvider";
-import QueryProvider from "@/components/common/QueryProvider/queryProvider";
+import QueryProvider from "@/components/common/QueryProvider/QueryProvider";
 import { Anek_Malayalam } from "next/font/google";
 import "./globals.css";
 
