@@ -18,7 +18,7 @@ import { MdOutgoingMail } from "react-icons/md";
 import { TbCurrencyTaka } from "react-icons/tb";
 
 const Footer = async () => {
-  const [latestPost, isLoaded] = await getLatestPost();
+  const latestPost = await getLatestPost();
   const categories = [
     {
       name: "শস্য",

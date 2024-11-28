@@ -2,8 +2,7 @@ import Card from "@/components/common/Card/Card";
 import getLatestPost from "@/libs/dataQuerys/getUserPost";
 
 const LatestProduct = async () => {
-  const [latestPost, isLoaded] = await getLatestPost();
-  console.log(latestPost);
+  const latestPost = await getLatestPost();
 
   return (
     <div className="mt-20">
@@ -13,7 +12,7 @@ const LatestProduct = async () => {
           এখানে আমাদের কিছু নতুন পণ্য এখানে পাবেন।
         </p>
       </div>
-      {!isLoaded ? (
+      {!latestPost ? (
         <div className="w-1/2 mx-auto">
           <div className="loading loading-spinner loading-lg mx-auto text-center block"></div>
         </div>
