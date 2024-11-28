@@ -3,6 +3,7 @@ import getLatestPost from "@/libs/dataQuerys/getUserPost";
 
 const LatestProduct = async () => {
   const latestPost = await getLatestPost();
+  console.log(latestPost);
 
   return (
     <div className="mt-20">
